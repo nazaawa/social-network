@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "13288384072",
+    "project_id": "exampleappli",
+    "storage_bucket": "exampleappli.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13288384072:android:f6f9073334ffa19351da7d",
+        "android_client_info": {
+          "package_name": "se.essika.instagram_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13288384072-kjimt5sfbohrabgnoet6jtkcn3vitg4d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUlBMJEVMQJaoaGWTcOEC3qq9o6yKenPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13288384072-kjimt5sfbohrabgnoet6jtkcn3vitg4d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
