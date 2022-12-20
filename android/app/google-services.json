@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "13288384072-cfjq8gjt8d9hqsuiooojd0s5qan0pdo8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "se.essika.instagram_clone",
+            "certificate_hash": "3c245745d770e5155da9d194d0a211fe66a438c0"
+          }
+        },
+        {
           "client_id": "13288384072-kjimt5sfbohrabgnoet6jtkcn3vitg4d.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "13288384072-kjimt5sfbohrabgnoet6jtkcn3vitg4d.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "13288384072-qoq29prekoh8a7kii3h0v9h0h6ftrjf2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "se.essika.instagramClone"
+              }
             }
           ]
         }
