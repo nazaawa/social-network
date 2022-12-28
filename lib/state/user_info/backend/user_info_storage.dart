@@ -19,8 +19,7 @@ class UserInfoStorage {
           .where(FirebaseFieldName.userId, isEqualTo: userId)
           .limit(1)
           .get();
-      print("payload");
-
+//collectionPath.isNotEmpty
       if (userInfo.docs.isNotEmpty) {
         await userInfo.docs.first.reference.update({
           FirebaseFieldName.displayName: displayName,
@@ -39,7 +38,6 @@ class UserInfoStorage {
           .add(payload);
       return true;
     } catch (e) {
-      print(e);
       return false;
     }
   }

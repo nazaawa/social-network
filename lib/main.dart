@@ -5,9 +5,9 @@ import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart'
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
 
 import 'firebase_options.dart';
-import 'state/auth/notifier/notifier_state_notifier.dart';
 import 'state/auth/providers/auth_state_provider.dart';
 import 'views/component/loading/loading_screen.dart';
+import 'views/login/login_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -63,28 +63,6 @@ class MainView extends ConsumerWidget {
       body: TextButton(
         onPressed: ref.read(authStateProvider.notifier).logOut,
         child: const Text("log out"),
-      ),
-    );
-  }
-}
-
-class LoginView extends ConsumerWidget {
-  const LoginView({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
-            child: const Text("Faceook Sign"),
-          ),
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
-            child: const Text("google Sign"),
-          )
-        ],
       ),
     );
   }
