@@ -3,9 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
+import 'package:instagram_clone/views/component/animations/data_not_found_animation.dart';
 
 import 'firebase_options.dart';
-import 'state/auth/providers/auth_state_provider.dart';
 import 'views/component/loading/loading_screen.dart';
 import 'views/login/login_view.dart';
 
@@ -60,10 +60,7 @@ class MainView extends ConsumerWidget {
       appBar: AppBar(
         title: const Text("MainView"),
       ),
-      body: TextButton(
-        onPressed: ref.read(authStateProvider.notifier).logOut,
-        child: const Text("log out"),
-      ),
+      body: const DataNotFoundAnimationView(),
     );
   }
 }
