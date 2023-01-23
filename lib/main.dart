@@ -3,11 +3,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instagram_clone/state/auth/providers/is_logged_in_provider.dart';
 import 'package:instagram_clone/state/providers/is_loading_provider.dart';
-import 'package:instagram_clone/views/component/animations/data_not_found_animation.dart';
 
 import 'firebase_options.dart';
 import 'views/component/loading/loading_screen.dart';
 import 'views/login/login_view.dart';
+import 'views/main/main_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,22 +45,7 @@ class App extends StatelessWidget {
         } else {
           return const LoginView();
         }
-      }),
-    );
-  }
-}
-
-// if he is already logged In
-class MainView extends ConsumerWidget {
-  const MainView({super.key});
-
-  @override
-  Widget build(BuildContext context, ref) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("MainView"),
-      ),
-      body: const DataNotFoundAnimationView(),
+      },),
     );
   }
 }
