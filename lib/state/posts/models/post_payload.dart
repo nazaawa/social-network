@@ -16,6 +16,7 @@ class PostPayload extends MapView<String, dynamic> {
     required String thumbnailUrl,
     required String fileUrl,
     required FileType fileType,
+    required String filename,
     required double aspectRatio,
     required String thumbnailStorageId,
     required String originalFileStorageId,
@@ -27,6 +28,7 @@ class PostPayload extends MapView<String, dynamic> {
           PostKey.thumbnailUrl: thumbnailUrl,
           PostKey.fileUrl: fileUrl,
           PostKey.fileType: fileType.name,
+          PostKey.fileName: filename,
           PostKey.aspectRatio: aspectRatio,
           PostKey.originalFileStorageId: originalFileStorageId,
           PostKey.postSettings: {

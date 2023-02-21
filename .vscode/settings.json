@@ -4,6 +4,7 @@
         "firestore",
         "instagram",
         "lottie",
-        "typedefs"
+        "typedefs",
+        "Uuid"
     ]
 }
