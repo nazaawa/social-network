@@ -25,7 +25,7 @@ class Post {
     required Map<String, dynamic> json,
   })  : userId = json[PostKey.userId],
         message = json[PostKey.message],
-        createdAt = (json[PostKey.createdAt] as Timestamp).toDate(),
+        createdAt = ((json[PostKey.createdAt] as Timestamp).toDate()),
         thumbnailUrl = json[PostKey.thumbnailUrl],
         fileUrl = json[PostKey.fileUrl],
         fileType = FileType.values.firstWhere(
@@ -43,6 +43,6 @@ class Post {
             ): entry.value,
         };
 
-   bool get allowsLikes => postSettings[PostSettings.allowLikes] ?? false;
+  bool get allowsLikes => postSettings[PostSettings.allowLikes] ?? false;
   bool get allowsComments => postSettings[PostSettings.allowComments] ?? false;
 }

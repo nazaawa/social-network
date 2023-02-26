@@ -14,10 +14,12 @@ class PostGridView extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         mainAxisSpacing: 8.0,
-        mainAxisExtent: 8.0,
+        crossAxisSpacing: 8.0,
       ),
+      itemCount: posts.length,
       itemBuilder: (BuildContext context, int index) {
         final post = posts.elementAt(index);
+
         return PostThumbnailView(
           post: post,
           onTapped: () {},

@@ -31,6 +31,8 @@ class ImageUploadNotifier extends StateNotifier<IsLoading> {
     required Map<PostSettings, bool> postSettings,
     required UserId userId,
   }) async {
+ 
+
     isLoading = true;
     late Uint8List thumbnailUin8List;
     switch (fileType) {
@@ -55,9 +57,11 @@ class ImageUploadNotifier extends StateNotifier<IsLoading> {
           quality: Constants.videoThumbnailQuality,
         );
         if (thumb == null) {
+          print("is null");
           isLoading = false;
           throw const CouldNotBuildThumbnailException();
         } else {
+          print("is not null");
           thumbnailUin8List = thumb;
         }
         break;

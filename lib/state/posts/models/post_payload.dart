@@ -30,6 +30,7 @@ class PostPayload extends MapView<String, dynamic> {
           PostKey.fileType: fileType.name,
           PostKey.fileName: filename,
           PostKey.aspectRatio: aspectRatio,
+          PostKey.thumbnailStorageId: thumbnailStorageId,
           PostKey.originalFileStorageId: originalFileStorageId,
           PostKey.postSettings: {
             for (final postSetting in postSettings.entries)

@@ -58,18 +58,21 @@ class _CreateNewPostViewState extends ConsumerState<CreateNewPostView> {
             onPressed: isPostButtonEnabled.value
                 ? () async {
                     final userId = ref.read(userIdProvider);
-                    if (userId != null) {
+                    if (userId == null) {
                       return;
                     }
                     final message = postController.text;
+                    print(message);
+
                     final isUploaded =
                         await ref.read(imageUploadProvider.notifier).upload(
                               file: widget.fileToPost,
                               fileType: widget.fileType,
                               message: message,
                               postSettings: postSettings,
-                              userId: userId!,
+                              userId: userId,
                             );
+                    print('is UpLoad: $isUploaded');
 
                     if (isUploaded && mounted) {
                       Navigator.of(context).pop();
